@@ -1,0 +1,20 @@
+.sider-card{
+  cursor: pointer;
+  line-height: 30px;
+  padding-left: 10px;
+  border-radius: 2px;
+  .folder-icon {
+    margin-right: 10px;
+  }
+
+  &.active {
+    opacity: .85;
+    color: #2a60e4;
+    background: #eff4ff;
+  }
+
+  &:hover {
+    background: #eff4ff8a;
+    opacity: 0.8;
+  }
+}

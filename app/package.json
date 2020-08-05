@@ -1,0 +1,15 @@
+{
+  "name": "fileX",
+  "productName": "fileX",
+  "version": "0.0.1",
+  "description": "File Manager about local file, electron + react + redux + sqlite + immutable",
+  "main": "./main.prod.js",
+  "scripts": {
+    "electron-rebuild": "node -r ../internals/scripts/BabelRegister.js ../internals/scripts/ElectronRebuild.js",
+    "postinstall": "yarn electron-rebuild"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "5.4.3"
+  }
+}

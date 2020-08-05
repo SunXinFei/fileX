@@ -1,0 +1,31 @@
+@import "~@app/style/variables.scss";
+.filex-introduction {
+  width: 250px;
+  min-width: 250px;
+  height: 100%;
+  border-left: 1px solid #e8e8e8;
+
+  .intro-tab {
+    height: $appContentRouterHeight;
+    border-bottom: 1px solid #e8e8e8;
+    display: flex;
+    align-items: center;
+  }
+  .intro-tab-name{
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+    line-height: 38px;
+    opacity: 0.5;
+    &.active{
+      opacity: 1;
+    }
+  }
+
+  .intro-content {
+    padding: 10px 20px;
+    .item-text{
+      margin: 10px 0;
+    }
+  }
+}

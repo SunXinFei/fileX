@@ -1,0 +1,16 @@
+// 添加文件路径到本地
+export const ADDFOLDERPATHFORLOCAL = 'ADDFOLDERPATHFORLOCAL';
+// 选择文件夹路径在边栏
+export const SETFOLDERPATHACTIVEINSIDER = 'SETFOLDERPATHACTIVEINSIDER';
+//InvalidPathModal组件中的显示的无效路径
+export const SETVISIBLEINVALIDPATHMODAL = 'SETVISIBLEINVALIDPATHMODAL';
+//显示/隐藏内容区域的loading
+export const SETCONTENTLOADING = "SETCONTENTLOADING";
+//设置redoList
+export const SETREDOLIST = "SETREDOLIST";
+//设置undoList
+export const SETUNDOLIST = "SETUNDOLIST";
+//设置readerModalObj
+export const SETREADERMODALOBJ = "SETREADERMODALOBJ";
+//设置selectedCardList
+export const SETSELECTEDCARDLIST = "SETSELECTEDCARDLIST";

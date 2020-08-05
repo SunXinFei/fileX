@@ -1,0 +1,42 @@
+.filex-sider{
+  width: 250px;
+  min-width: 250px;
+  height: 100%;
+  border-right: 1px solid #e8e8e8;
+  padding: 10px 10px 10px 15px;
+  position: relative;
+
+  .sider-content {
+    min-height: 40vh;
+
+    .title {
+      line-height: 36px;
+      height: 36px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+        color: #2a60e4;
+        opacity: 0.85;
+      }
+    }
+
+    .file-path-list {
+      list-style-type: none;
+      margin-left: 0px;
+      padding-left: 0;
+    }
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    left: 15px;
+    right: 10px;
+  }
+}

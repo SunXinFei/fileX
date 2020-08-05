@@ -1,0 +1,42 @@
+@import "~@app/style/variables.scss";
+
+.filex-content {
+  flex: 1;
+  height: 100%;
+
+  &-main {
+    overflow-y: scroll;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    background: #F9F9F9;
+    position: relative;
+    height: calc(100vh - #{$appContentRouterHeight} - #{$appContentOptionHeight} );
+    &.forbid-scroll{
+      overflow-y: hidden;
+    }
+    .flex-empty {
+      border: 1px solid transparent;
+      margin: 0;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      visibility: hidden;
+      height: 0 !important;
+    }
+
+    .content-loading {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: end;
+      justify-content: flex-end;
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: #2a60e4d6;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+.filex-content-main-card {
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+  border-radius: 0px;
+  padding: 5px;
+  margin: 5px 0;
+  
+  &:hover {
+    background: #e5f3ff;
+    border-color: transparent;
+  }
+
+  &.selected {
+    border-radius: 5px;
+    box-shadow: 0 0 0px 1px #2a60e4;
+    &:hover{
+      background: none;
+    }
+    .card-filename {
+      background: #4a89ff;
+      color: #fff;
+      border-radius: 4px;
+    }
+  }
+
+ 
+
+  // &:active {
+  //   background: #cce8ff;
+  //   border-color: #99d1ff;
+  // }
+
+  .card-prew {
+    text-align: center;
+
+    img {
+      width: 65%;
+    }
+  }
+
+  .card-filename {
+    cursor: default;
+    text-align: center;
+    word-break: break-all;
+    font-size: 12px;
+    margin: 0 auto;
+    padding: 0 2px;
+    line-height: 1.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /* autoprefixer: on */
+
+    span {
+      cursor: text;
+    }
+  }
+}
