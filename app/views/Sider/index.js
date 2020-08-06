@@ -29,11 +29,13 @@ class Sider extends Component {
    */
   addLocalFile = async () => {
     //返回undefined（取消按钮）/ 文件夹路径（确认按钮）
-    let filePath = await dialog.showOpenDialog(
+    let filePathObj = await dialog.showOpenDialog(
       { properties: ["openDirectory"] }
     );
+
     //文件夹路径存在
-    if (filePath) {
+    if (filePathObj) {
+      const filePath = filePathObj.filePaths[0];
       //判断是否已添加
       if (this.props.folderPathLocal.includes(String(filePath))) {
         message.warning('该文件夹已存在');
