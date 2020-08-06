@@ -9,20 +9,24 @@ import * as actionType from '@app/store/actionType';
  * 本地存储常量Key
  */
 export const StorageKey = "FILEX_STORE"
-
+//elecotrn目录文件夹
 const dataPath = (electron.app || electron.remote.app).getPath('userData');
+//用户数据目录文件夹
 const userDataPath = resolve(dataPath, './FileX/filex');
+//md文件目标地址
 const targetPath = resolve(userDataPath, './fileX.md')
-const mdFilePath = resolve(__dirname, '../fileX.md')
+//数据文件夹地址
 const fileXDirDataPath = resolve(dataPath, './FileX/data')
 fsExtra.ensureDirSync(fileXDirDataPath)
+//db文件地址
 export const fileXDataPath = resolve(fileXDirDataPath, './filex.db');
 
 /**
- * 拷贝md文件到用户数据层
+ * 拷贝md&pdf文件到用户数据层
  */
 const getEmptyFolderPathLocal = () => {
-	fsExtra.copySync(mdFilePath, targetPath)
+	fsExtra.copySync(resolve(__dirname, '../fileX.md'), targetPath)
+	fsExtra.copySync(resolve(__dirname, '../fileX.pdf'), resolve(userDataPath, './fileX.pdf'))
 	return List([userDataPath])
 }
 
